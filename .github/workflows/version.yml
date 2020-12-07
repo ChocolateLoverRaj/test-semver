@@ -27,4 +27,4 @@ jobs:
       - name: Update Version
         uses: ChocolateLoverRaj/npm-version@main
         with:
-          version: 'major'
+          version: 'bad'
