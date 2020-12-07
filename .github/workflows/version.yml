@@ -25,4 +25,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Update Version
-        uses: ChocolateLoverRaj/npm-version
+        uses: ChocolateLoverRaj/npm-version@main
