@@ -1,9 +1,7 @@
-const github = require('@actions/github')
+module.exports = (github, octokit) => {
+    const bases = ['major', 'minor', 'patch']
+    const head = github.context.payload.repository.default_branch
 
-const bases = ['major', 'minor', 'patch']
-const head = github.context.payload.repository.default_branch
-
-module.exports = octokit => {
     Promise.all(bases.map(async base => {
         await octokit.repos.merge({
             owner: github.context.repo.owner,
