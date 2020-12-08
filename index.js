@@ -1,4 +1,4 @@
-const lib = () => 'nice'
+const lib = () => 'noice'
 
 lib.good = () => 3
 
