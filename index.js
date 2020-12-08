@@ -1,5 +1,5 @@
 const lib = () => {
-    return 3
+    return 4
 }
 
 export default lib
