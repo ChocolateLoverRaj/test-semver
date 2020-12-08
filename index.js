@@ -4,7 +4,8 @@ lib.good = () => 3
 
 const kind = [
     'Thank You',
-    'You are amazing'
+    'You are amazing',
+    'Good'
 ]
 lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
 
