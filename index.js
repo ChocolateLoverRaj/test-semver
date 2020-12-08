@@ -1,5 +1,5 @@
 const lib = () => {
-    return 4
+    return 'nice'
 }
 
 export default lib
