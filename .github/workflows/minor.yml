@@ -29,4 +29,4 @@ jobs:
         with:
           version: 'minor'
           token: ${{ secrets.GITHUB_TOKEN }}
-          on_finish: 'merge.yml'
+          on_finish: 'on-version.cjs'
