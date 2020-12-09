@@ -29,5 +29,4 @@ jobs:
         with:
           version: 'minor'
           token: ${{ secrets.GITHUB_TOKEN }}
-          on_finish: 'merge'
-          on_finish_config: 'major,minor,patch'
+          on_finish: 'on-finish.json'
