@@ -25,7 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Merge Branch
-        uses: ChocolateLoverRaj/auto-merge@main
+        uses: ChocolateLoverRaj/npm-version/merge@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           bases: 'major,minor,patch'
