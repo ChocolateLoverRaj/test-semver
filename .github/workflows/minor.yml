@@ -28,4 +28,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           on_finish: 'on-finish.json'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
