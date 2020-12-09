@@ -29,13 +29,3 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           bases: 'major,minor,patch'
-  
-  publish:
-    runs-on: ubuntu-latest
-    
-    steps:
-
-      - uses: actions/checkout@v2
-
-      - name: Publish Package
-        uses: ChocolateLoverRaj/npm-version/publish@main
