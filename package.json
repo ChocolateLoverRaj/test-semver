@@ -1,7 +1,7 @@
 {
   "name": "@programmerraj/test-semver",
   "version": "5.14.0",
-  "description": "",
+  "description": "Testing out github actions setup for npm package development.",
   "type": "module",
   "main": "index.js",
   "scripts": {
