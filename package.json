@@ -1,6 +1,6 @@
 {
   "name": "@programmerraj/test-semver",
-  "version": "5.12.0",
+  "version": "5.13.0",
   "description": "",
   "type": "module",
   "main": "index.js",
