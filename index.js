@@ -8,7 +8,8 @@ const kind = [
     'Good',
     'Nice',
     'You\'re Welcome',
-    'Hello'
+    'Hello',
+    'Hi'
 ]
 lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
 
