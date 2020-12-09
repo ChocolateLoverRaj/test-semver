@@ -39,4 +39,3 @@ jobs:
 
       - name: Publish Package
         uses: ChocolateLoverRaj/npm-version/publish@main
-        with:
