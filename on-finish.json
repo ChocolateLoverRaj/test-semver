@@ -2,5 +2,6 @@
     "merge": {
         "bases": "major,minor,patch"
     },
-    "publish": {}
+    "publish": {},
+    "release": {}
 }
