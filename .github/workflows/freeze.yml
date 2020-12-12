@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main, major, minor, patch]
 jobs:
-  npm:
+  json:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
