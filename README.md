@@ -2,7 +2,7 @@
 Tests npm package making workflows.
 
 ## Installing
-```bash
+```
 npm i @programmerraj/test-semver
 ```
 
