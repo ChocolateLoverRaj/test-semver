@@ -9,6 +9,35 @@ npm i @programmerraj/test-semver
 ## Why
 This repository is a simple (but not practical) npm package. It uses [npm-version](https://github.com/chocolateloverraj/npm-version) actions in it's workflows.
 
+## Lib
+```js
+import lib from '@programmerraj/test-semver'
+```
+
+### Lib fn
+Returns `'noice'`.
+```js
+lib() // => 'noice'
+```
+
+### Good
+Returns `3`.
+```js
+lib.good() // => 3
+```
+
+### Kind
+Returns random kind message.
+```js
+lib.kind() // => 'You are amazing'
+```
+
+### Coin
+Randomly returns either `'head'` or `'tail'`, like a coin flip.
+```js
+lib.coin() // => 'head'
+```
+
 ## Contributing
 This package follows semver. Bug fixes, new features, and breaking changes are welcome.
 
