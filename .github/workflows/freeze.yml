@@ -1,0 +1,13 @@
+name: Freeze
+on:
+  pull_request:
+    branches: [main, major, minor, patch]
+jobs:
+  json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check Json
+        uses: ChocolateLoverRaj/npm-version/freeze@main
+        with:
+          options: 'freeze.json'
