@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ChocolateLoverRaj/npm-version/main/on-finish-schema.json",
     "merge": {
         "bases": "major,minor,patch"
     },
