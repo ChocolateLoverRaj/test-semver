@@ -26,7 +26,7 @@ const kind = [
 lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
 
 lib.coin = () => Math.random() < 0.5
-    ? 'heads'
-    : 'tails'
+    ? 'head'
+    : 'tail'
 
 export default lib
