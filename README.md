@@ -7,7 +7,7 @@ npm i @programmerraj/test-semver
 ```
 
 ## Why
-This repository is a simple (but not practical) npm package. It uses (npm-version)[https://github.com/chocolateloverraj/npm-version] actions in it's workflows.
+This repository is a simple (but not practical) npm package. It uses [npm-version](https://github.com/chocolateloverraj/npm-version) actions in it's workflows.
 
 ## Contributing
 This package follows semver. Bug fixes, new features, and breaking changes are welcome.
