@@ -10,4 +10,4 @@ jobs:
       - name: Check Json
         uses: ChocolateLoverRaj/npm-version/freeze@main
         with:
-          json: 'freeze.json'
+          options: 'freeze.json'
