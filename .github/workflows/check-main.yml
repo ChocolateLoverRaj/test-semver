@@ -1,4 +1,4 @@
-name: Check
+name: Check Same
 on:
   pull_request:
     branches: [main]

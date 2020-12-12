@@ -1,4 +1,4 @@
-name: Freeze
+name: Check Freeze
 on:
   pull_request:
     branches: [main, major, minor, patch]
