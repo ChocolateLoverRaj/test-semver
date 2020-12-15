@@ -8,7 +8,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "build": "jsdoc2md index.js > doc/api.md",
+    "build": "jsdoc2md index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
