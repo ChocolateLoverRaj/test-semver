@@ -5,6 +5,7 @@
 * [@programmerraj/test-semver](#module_@programmerraj/test-semver)
     * [~lib()](#module_@programmerraj/test-semver..lib)
         * [.good()](#module_@programmerraj/test-semver..lib.good)
+        * [.kind()](#module_@programmerraj/test-semver..lib.kind)
 
 <a name="module_@programmerraj/test-semver..lib"></a>
 
@@ -12,9 +13,20 @@
 Returns `'noice'`.
 
 **Kind**: inner method of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+
+* [~lib()](#module_@programmerraj/test-semver..lib)
+    * [.good()](#module_@programmerraj/test-semver..lib.good)
+    * [.kind()](#module_@programmerraj/test-semver..lib.kind)
+
 <a name="module_@programmerraj/test-semver..lib.good"></a>
 
 #### lib.good()
 Returns `3`.
+
+**Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
+<a name="module_@programmerraj/test-semver..lib.kind"></a>
+
+#### lib.kind()
+Returns random kind message.
 
 **Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  

@@ -33,6 +33,9 @@ const kind = [
     'You are good',
     'You are'
 ]
+/**
+ * Returns random kind message.
+ */
 lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
 
 lib.coin = () => Math.random() < 0.5
