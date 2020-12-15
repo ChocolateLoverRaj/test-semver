@@ -10,14 +10,9 @@ npm i @programmerraj/test-semver
 This repository is a simple (but not practical) npm package. It uses [npm-version](https://github.com/chocolateloverraj/npm-version) actions in it's workflows.
 
 ## Lib
+See `doc/API.md` for api.
 ```js
 import lib from '@programmerraj/test-semver'
-```
-
-### Coin
-Randomly returns either `'head'` or `'tail'`, like a coin flip.
-```js
-lib.coin() // => 'head'
 ```
 
 ## Contributing

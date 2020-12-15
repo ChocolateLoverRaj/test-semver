@@ -6,6 +6,7 @@
     * [~lib()](#module_@programmerraj/test-semver..lib)
         * [.good()](#module_@programmerraj/test-semver..lib.good)
         * [.kind()](#module_@programmerraj/test-semver..lib.kind)
+        * [.coin()](#module_@programmerraj/test-semver..lib.coin)
 
 <a name="module_@programmerraj/test-semver..lib"></a>
 
@@ -17,6 +18,7 @@ Returns `'noice'`.
 * [~lib()](#module_@programmerraj/test-semver..lib)
     * [.good()](#module_@programmerraj/test-semver..lib.good)
     * [.kind()](#module_@programmerraj/test-semver..lib.kind)
+    * [.coin()](#module_@programmerraj/test-semver..lib.coin)
 
 <a name="module_@programmerraj/test-semver..lib.good"></a>
 
@@ -28,5 +30,11 @@ Returns `3`.
 
 #### lib.kind()
 Returns a random kind message.
+
+**Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
+<a name="module_@programmerraj/test-semver..lib.coin"></a>
+
+#### lib.coin()
+Randomly returns either `'head'` or `'tail'`, like a coin flip.
 
 **Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
