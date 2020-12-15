@@ -4,7 +4,11 @@
   "description": "Testing out github actions setup for npm package development.",
   "type": "module",
   "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
   "scripts": {
+    "build": "jsdoc2md index.js > doc/api.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/chocolateloverraj/test-semver/issues"
   },
-  "homepage": "https://github.com/chocolateloverraj/test-semver#readme"
+  "homepage": "https://github.com/chocolateloverraj/test-semver#readme",
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.1"
+  }
 }

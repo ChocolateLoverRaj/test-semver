@@ -1,4 +1,4 @@
-name: Merge
+name: Main
 on:
   push:
     branches: [main]
@@ -7,6 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+      - uses: ChocolateLoverRaj/npm-version/commit@next
+        with:
+          files: 'doc/API.md'
+          message: 'Generate doc/API.md'
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge Branch
         uses: ChocolateLoverRaj/npm-version/merge@main
         with:
