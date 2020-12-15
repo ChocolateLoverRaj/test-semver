@@ -14,12 +14,6 @@ This repository is a simple (but not practical) npm package. It uses [npm-versio
 import lib from '@programmerraj/test-semver'
 ```
 
-### Good
-Returns `3`.
-```js
-lib.good() // => 3
-```
-
 ### Kind
 Returns random kind message.
 ```js
