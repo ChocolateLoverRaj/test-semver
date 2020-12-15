@@ -5,7 +5,8 @@
     },
     "commit": {
         "files": "doc/API.md",
-        "message": "Generate doc/API.md"
+        "message": "Generate doc/API.md",
+        "branch": "main"
     },
     "merge": {
         "bases": "major,minor,patch"
