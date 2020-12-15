@@ -1,5 +1,12 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ChocolateLoverRaj/npm-version/main/on-finish-schema.json",
+    "$schema": "https://raw.githubusercontent.com/ChocolateLoverRaj/npm-version/next/on-finish-schema.json",
+    "run-command": {
+        "command": "npm run build"
+    },
+    "commit": {
+        "files": "doc/API.md",
+        "message": "Generate doc/API.md"
+    },
     "merge": {
         "bases": "major,minor,patch"
     },
