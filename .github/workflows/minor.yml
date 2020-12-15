@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Update Version
-        uses: ChocolateLoverRaj/npm-version@main
+        uses: ChocolateLoverRaj/npm-version@next
         with:
           version: 'minor'
           token: ${{ secrets.GITHUB_TOKEN }}
