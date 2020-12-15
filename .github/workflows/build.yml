@@ -1,0 +1,18 @@
+name: Build
+on:
+  push:
+    branches-ignore: [main, major, minor, patch]
+jobs:
+  doc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+      - name: Update API.md
+        uses: ChocolateLoverRaj/npm-version/commit@next
+        with:
+          files: 'doc/API.md'
+          message: 'Generate doc/API.md'
+          token: ${{ secrets.GITHUB_TOKEN }}
