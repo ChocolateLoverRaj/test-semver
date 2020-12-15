@@ -2,6 +2,9 @@
  * @module @programmerraj/test-semver
  */
 
+/**
+ * Returns `'noice'`.
+ */
 const lib = () => 'noice'
 
 lib.good = () => 3
