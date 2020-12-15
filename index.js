@@ -7,6 +7,9 @@
  */
 const lib = () => 'noice'
 
+/**
+ * Returns `3`.
+ */
 lib.good = () => 3
 
 const kind = [
