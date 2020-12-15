@@ -14,12 +14,6 @@ This repository is a simple (but not practical) npm package. It uses [npm-versio
 import lib from '@programmerraj/test-semver'
 ```
 
-### Kind
-Returns random kind message.
-```js
-lib.kind() // => 'You are amazing'
-```
-
 ### Coin
 Randomly returns either `'head'` or `'tail'`, like a coin flip.
 ```js
