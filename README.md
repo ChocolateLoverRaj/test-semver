@@ -14,12 +14,6 @@ This repository is a simple (but not practical) npm package. It uses [npm-versio
 import lib from '@programmerraj/test-semver'
 ```
 
-### Lib fn
-Returns `'noice'`.
-```js
-lib() // => 'noice'
-```
-
 ### Good
 Returns `3`.
 ```js
