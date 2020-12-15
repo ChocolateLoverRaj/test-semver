@@ -27,6 +27,6 @@ Returns `3`.
 <a name="module_@programmerraj/test-semver..lib.kind"></a>
 
 #### lib.kind()
-Returns random kind message.
+Returns a random kind message.
 
 **Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
