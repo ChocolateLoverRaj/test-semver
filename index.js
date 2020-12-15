@@ -1,3 +1,7 @@
+/**
+ * @module @programmerraj/test-semver
+ */
+
 const lib = () => 'noice'
 
 lib.good = () => 3
