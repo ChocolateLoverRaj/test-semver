@@ -1,3 +1,20 @@
 <a name="module_@programmerraj/test-semver"></a>
 
 ## @programmerraj/test-semver
+
+* [@programmerraj/test-semver](#module_@programmerraj/test-semver)
+    * [~lib()](#module_@programmerraj/test-semver..lib)
+        * [.good()](#module_@programmerraj/test-semver..lib.good)
+
+<a name="module_@programmerraj/test-semver..lib"></a>
+
+### @programmerraj/test-semver~lib()
+Returns `'noice'`.
+
+**Kind**: inner method of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+<a name="module_@programmerraj/test-semver..lib.good"></a>
+
+#### lib.good()
+Returns `3`.
+
+**Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
