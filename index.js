@@ -38,6 +38,9 @@ const kind = [
  */
 lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
 
+/**
+ * Randomly returns either `'head'` or `'tail'`, like a coin flip.
+ */
 lib.coin = () => Math.random() < 0.5
     ? 'head'
     : 'tail'
