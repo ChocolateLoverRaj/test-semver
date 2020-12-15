@@ -34,7 +34,7 @@ const kind = [
     'You are'
 ]
 /**
- * Returns random kind message.
+ * Returns a random kind message.
  */
 lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
 
