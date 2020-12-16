@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check Npm
-        uses: ChocolateLoverRaj/npm-version/check@main
+        uses: ChocolateLoverRaj/npm-version/check@1.1.0
         with:
           same: false
