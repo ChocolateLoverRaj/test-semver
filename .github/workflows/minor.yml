@@ -14,6 +14,18 @@ jobs:
         with:
           version: 'minor'
           token: ${{ secrets.GITHUB_TOKEN }}
-          on_finish: 'on-finish.json'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run build
+      - uses: ChocolateLoverRaj/npm-version/commit@next
+        with:
+          files: 'doc/API.md'
+          message: 'Generate doc/API.md'
+          branch: 'main'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ChocolateLoverRaj/npm-version/merge@1.0.0
+        with:
+          bases: 'major,minor,patch'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo 'Will publish later'
+      - run: echo 'Will release later'
