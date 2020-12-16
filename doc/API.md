@@ -3,19 +3,19 @@
 ## @programmerraj/test-semver
 
 * [@programmerraj/test-semver](#module_@programmerraj/test-semver)
-    * [~lib()](#module_@programmerraj/test-semver..lib)
+    * [~lib()](#module_@programmerraj/test-semver..lib) ⇒ <code>string</code>
         * [.good()](#module_@programmerraj/test-semver..lib.good)
         * [.kind()](#module_@programmerraj/test-semver..lib.kind)
         * [.coin()](#module_@programmerraj/test-semver..lib.coin)
 
 <a name="module_@programmerraj/test-semver..lib"></a>
 
-### @programmerraj/test-semver~lib()
+### @programmerraj/test-semver~lib() ⇒ <code>string</code>
 Returns `'noice'`.
 
 **Kind**: inner method of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
 
-* [~lib()](#module_@programmerraj/test-semver..lib)
+* [~lib()](#module_@programmerraj/test-semver..lib) ⇒ <code>string</code>
     * [.good()](#module_@programmerraj/test-semver..lib.good)
     * [.kind()](#module_@programmerraj/test-semver..lib.kind)
     * [.coin()](#module_@programmerraj/test-semver..lib.coin)
