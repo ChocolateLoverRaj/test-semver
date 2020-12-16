@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ChocolateLoverRaj/npm-version/next/on-finish-schema.json",
+    "$schema": "https://raw.githubusercontent.com/ChocolateLoverRaj/npm-version/1.1.0/on-finish-schema.json",
     "run-command": {
         "command": "npm run build"
     },
