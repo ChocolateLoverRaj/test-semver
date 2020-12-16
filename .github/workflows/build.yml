@@ -11,7 +11,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Update API.md
-        uses: ChocolateLoverRaj/npm-version/commit@1.1.0
+        uses: ChocolateLoverRaj/npm-version/commit@next
         with:
           files: 'doc/API.md'
           message: 'Generate doc/API.md'
