@@ -14,8 +14,6 @@ jobs:
         with:
           version: 'minor'
           token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run build
       - uses: ChocolateLoverRaj/npm-version/commit@next
         with:
@@ -27,5 +25,7 @@ jobs:
         with:
           bases: 'major,minor,patch'
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo 'Will publish later'
+      - uses: ChocolateLoverRaj/npm-version/publish@next
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: echo 'Will release later'
