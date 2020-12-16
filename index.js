@@ -4,6 +4,7 @@
 
 /**
  * Returns `'noice'`.
+ * @returns {string}
  */
 const lib = () => 'noice'
 
