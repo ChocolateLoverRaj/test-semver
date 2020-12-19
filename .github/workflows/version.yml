@@ -1,9 +1,9 @@
-name: Minor
+name: Version
 on:
   push:
-    branches: [minor]
+    branches: [major, minor, patch]
 jobs:
-  version:
+  increase:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

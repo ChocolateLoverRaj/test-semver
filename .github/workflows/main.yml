@@ -15,8 +15,7 @@ jobs:
           files: 'doc/API.md'
           message: 'Generate doc/API.md'
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Merge Branch
-        uses: ChocolateLoverRaj/npm-version/merge@1.0.0
+      - uses: ChocolateLoverRaj/npm-version/merge@next
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           bases: 'major,minor,patch'
