@@ -9,10 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm ci
-      - name: Update Version
-        uses: ChocolateLoverRaj/npm-version@1.1.0
+      - uses: ChocolateLoverRaj/npm-version@next
         with:
-          version: 'minor'
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run build
       - uses: ChocolateLoverRaj/npm-version/commit@next
@@ -21,11 +19,13 @@ jobs:
           message: 'Generate doc/API.md'
           branch: 'main'
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: ChocolateLoverRaj/npm-version/merge@1.0.0
+      - uses: ChocolateLoverRaj/npm-version/merge@next
         with:
           bases: 'major,minor,patch'
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: ChocolateLoverRaj/npm-version/publish@next
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: echo 'Will release later'
+      - uses: ChocolateLoverRaj/npm-version/release@next
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
