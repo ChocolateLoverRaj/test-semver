@@ -27,6 +27,6 @@ jobs:
       - uses: ChocolateLoverRaj/npm-version/publish@next
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - uses: ChocolateLoverRaj/npm-version/version@next
+      - uses: ChocolateLoverRaj/npm-version/release@next
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
