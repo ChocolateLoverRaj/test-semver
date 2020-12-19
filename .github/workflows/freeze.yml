@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check Json
-        uses: ChocolateLoverRaj/npm-version/freeze@1.1.0
+        uses: ChocolateLoverRaj/npm-version/freeze@next
         with:
           options: 'freeze.json'
