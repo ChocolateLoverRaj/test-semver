@@ -1,10 +1,17 @@
-name: Check Change
+name: Check
 on:
   pull_request:
     branches: [main, major, minor, patch]
 jobs:
-  npm:
+  change:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ChocolateLoverRaj/npm-version/check@next
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ChocolateLoverRaj/npm-version/freeze@next
+        with:
+          options: 'freeze.json'
