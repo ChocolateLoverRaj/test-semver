@@ -10,6 +10,7 @@ const lib = () => 'noice'
 
 /**
  * Returns `3`.
+ * @returns {number}
  */
 lib.good = () => 3
 

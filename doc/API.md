@@ -4,7 +4,7 @@
 
 * [@programmerraj/test-semver](#module_@programmerraj/test-semver)
     * [~lib()](#module_@programmerraj/test-semver..lib) ⇒ <code>string</code>
-        * [.good()](#module_@programmerraj/test-semver..lib.good)
+        * [.good()](#module_@programmerraj/test-semver..lib.good) ⇒ <code>number</code>
         * [.kind()](#module_@programmerraj/test-semver..lib.kind)
         * [.coin()](#module_@programmerraj/test-semver..lib.coin)
 
@@ -16,13 +16,13 @@ Returns `'noice'`.
 **Kind**: inner method of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
 
 * [~lib()](#module_@programmerraj/test-semver..lib) ⇒ <code>string</code>
-    * [.good()](#module_@programmerraj/test-semver..lib.good)
+    * [.good()](#module_@programmerraj/test-semver..lib.good) ⇒ <code>number</code>
     * [.kind()](#module_@programmerraj/test-semver..lib.kind)
     * [.coin()](#module_@programmerraj/test-semver..lib.coin)
 
 <a name="module_@programmerraj/test-semver..lib.good"></a>
 
-#### lib.good()
+#### lib.good() ⇒ <code>number</code>
 Returns `3`.
 
 **Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
