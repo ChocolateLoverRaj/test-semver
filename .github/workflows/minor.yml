@@ -9,8 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm ci
-      - name: Update Version
-        uses: ChocolateLoverRaj/npm-version@next
+      - uses: ChocolateLoverRaj/npm-version@next
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run build
