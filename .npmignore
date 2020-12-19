@@ -1,5 +1,4 @@
 .github
 .vscode
 freeze.json
-on-finish.json
 node_modules
