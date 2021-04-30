@@ -6,13 +6,13 @@
  * Returns `'noice'`.
  * @returns {string}
  */
-const lib = () => 'noice'
+export const lib = () => 'noice'
 
 /**
  * Returns `3`.
  * @returns {number}
  */
-lib.good = () => 3
+export const good = () => 3
 
 const kind = [
     'Thank You',
@@ -38,13 +38,11 @@ const kind = [
 /**
  * Returns a random kind message.
  */
-lib.kind = () => kind[Math.floor(Math.random() * kind.length)]
+export const kind = () => kind[Math.floor(Math.random() * kind.length)]
 
 /**
  * Randomly returns either `'head'` or `'tail'`, like a coin flip.
  */
-lib.coin = () => Math.random() < 0.5
+export const coin = () => Math.random() < 0.5
     ? 'head'
     : 'tail'
-
-export default lib
