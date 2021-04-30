@@ -1,6 +1,6 @@
 {
   "name": "@programmerraj/test-semver",
-  "version": "1.3.0",
+  "version": "0.0.0-development",
   "description": "Testing out github actions setup for npm package development.",
   "type": "module",
   "main": "index.js",
@@ -9,11 +9,12 @@
   },
   "scripts": {
     "build": "jsdoc2md index.js > doc/API.md",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chocolateloverraj/test-semver.git"
+    "url": "https://github.com/chocolateloverraj/test-semver.git"
   },
   "author": "Rajas Paranjpe",
   "license": "MIT",
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/chocolateloverraj/test-semver#readme",
   "devDependencies": {
-    "jsdoc-to-markdown": "^6.0.1"
+    "jsdoc-to-markdown": "^6.0.1",
+    "semantic-release-cli": "^5.4.3",
+    "semantic-release": "^17.4.2"
   }
 }
