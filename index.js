@@ -2,6 +2,8 @@
  * @module @programmerraj/test-semver
  */
 
+import randomItem from 'random-item'
+
 /**
  * Returns `'noice'`.
  * @returns {string}
@@ -38,7 +40,7 @@ const kind = [
 /**
  * Returns a random kind message.
  */
-export const kind = () => kind[Math.floor(Math.random() * kind.length)]
+export const kind = () => randomItem(kind)
 
 /**
  * Randomly returns either `'head'` or `'tail'`, like a coin flip.
