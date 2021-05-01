@@ -16,7 +16,7 @@ export const lib = () => 'noice'
  */
 export const good = () => 3
 
-const kind = [
+const kindMessages = [
     'Thank You',
     'You are amazing',
     'Good',
@@ -40,7 +40,7 @@ const kind = [
 /**
  * Returns a random kind message.
  */
-export const kind = () => randomItem(kind)
+export const kind = () => randomItem(kindMessages)
 
 /**
  * Randomly returns either `'head'` or `'tail'`, like a coin flip.
