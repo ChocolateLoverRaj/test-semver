@@ -12,10 +12,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14
-    - name: Install Dependencies
-      run: npm ci
-    - name: Semantic Release
-      run: npx semantic-release
+    - name: Setup Pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.4
+    - name: Release
+      uses: ChocolateLoverRaj/auto-release@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
