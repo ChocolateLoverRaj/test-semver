@@ -1,9 +1,9 @@
-name: Release
+name: Release Preview
 on:
-  push:
+  pull_request:
     branches: [main]
 jobs:
-  release:
+  release-preview:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -17,7 +17,6 @@ jobs:
       with:
         version: 6.4
     - name: Release
-      uses: ChocolateLoverRaj/auto-release@main
+      uses: ChocolateLoverRaj/pr-increment-preview@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
