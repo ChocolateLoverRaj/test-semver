@@ -3,38 +3,39 @@
 ## @programmerraj/test-semver
 
 * [@programmerraj/test-semver](#module_@programmerraj/test-semver)
-    * [~lib()](#module_@programmerraj/test-semver..lib) ⇒ <code>string</code>
-        * [.good()](#module_@programmerraj/test-semver..lib.good) ⇒ <code>number</code>
-        * [.kind()](#module_@programmerraj/test-semver..lib.kind)
-        * [.coin()](#module_@programmerraj/test-semver..lib.coin)
+    * [.lib](#module_@programmerraj/test-semver.lib) ⇒ <code>string</code>
+    * [.good](#module_@programmerraj/test-semver.good) ⇒ <code>number</code>
+    * [.kind](#module_@programmerraj/test-semver.kind)
+    * [.coin](#module_@programmerraj/test-semver.coin)
+    * [.greatColor](#module_@programmerraj/test-semver.greatColor)
 
-<a name="module_@programmerraj/test-semver..lib"></a>
+<a name="module_@programmerraj/test-semver.lib"></a>
 
-### @programmerraj/test-semver~lib() ⇒ <code>string</code>
+### @programmerraj/test-semver.lib ⇒ <code>string</code>
 Returns `'noice'`.
 
-**Kind**: inner method of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+**Kind**: static constant of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+<a name="module_@programmerraj/test-semver.good"></a>
 
-* [~lib()](#module_@programmerraj/test-semver..lib) ⇒ <code>string</code>
-    * [.good()](#module_@programmerraj/test-semver..lib.good) ⇒ <code>number</code>
-    * [.kind()](#module_@programmerraj/test-semver..lib.kind)
-    * [.coin()](#module_@programmerraj/test-semver..lib.coin)
-
-<a name="module_@programmerraj/test-semver..lib.good"></a>
-
-#### lib.good() ⇒ <code>number</code>
+### @programmerraj/test-semver.good ⇒ <code>number</code>
 Returns `3`.
 
-**Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
-<a name="module_@programmerraj/test-semver..lib.kind"></a>
+**Kind**: static constant of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+<a name="module_@programmerraj/test-semver.kind"></a>
 
-#### lib.kind()
+### @programmerraj/test-semver.kind
 Returns a random kind message.
 
-**Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
-<a name="module_@programmerraj/test-semver..lib.coin"></a>
+**Kind**: static constant of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+<a name="module_@programmerraj/test-semver.coin"></a>
 
-#### lib.coin()
+### @programmerraj/test-semver.coin
 Randomly returns either `'head'` or `'tail'`, like a coin flip.
 
-**Kind**: static method of [<code>lib</code>](#module_@programmerraj/test-semver..lib)  
+**Kind**: static constant of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  
+<a name="module_@programmerraj/test-semver.greatColor"></a>
+
+### @programmerraj/test-semver.greatColor
+A great color
+
+**Kind**: static constant of [<code>@programmerraj/test-semver</code>](#module_@programmerraj/test-semver)  

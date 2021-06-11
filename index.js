@@ -48,3 +48,8 @@ export const kind = () => randomItem(kindMessages)
 export const coin = () => Math.random() < 0.5
   ? 'head'
   : 'tail'
+
+/**
+ * A great color
+ */
+export const greatColor = 'mediumSeaGreen'
