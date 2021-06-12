@@ -23,14 +23,12 @@
   },
   "homepage": "https://github.com/chocolateloverraj/test-semver#readme",
   "devDependencies": {
-    "@semantic-release/git": "^9.0.0",
-    "conventional-changelog-eslint": "^3.0.9",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "jsdoc-to-markdown": "^6.0.1",
-    "semantic-release": "^17.4.2"
+    "release-it": "^14.8.0"
   },
   "dependencies": {
     "random-item": "^4.0.0"

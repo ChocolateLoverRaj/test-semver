@@ -18,7 +18,7 @@ jobs:
         version: 6.4
         run_install: true
     - name: Semantic Release
-      run: npx semantic-release
+      run: pnpx release-it minor --ci --dry-run
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
