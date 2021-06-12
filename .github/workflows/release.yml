@@ -17,6 +17,10 @@ jobs:
       with:
         version: 6.4
         run_install: true
+    - name: Setup GitHub Author
+      run: |
+        git config --global user.email "52586855+ChocolateLoverRaj@users.noreply.github.com"
+        git config --global user.name "Rajas Paranjpe"
     - name: Semantic Release
       run: pnpx release-it minor --ci
       env:
