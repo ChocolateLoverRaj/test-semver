@@ -17,12 +17,16 @@ jobs:
       with:
         version: 6.4
         run_install: true
+    - id: get_increment
+      name: Get Increment
+      uses: ChocolateLoverRaj/detect-increment@main
+    - run: echo ${{ steps.get_increment.outputs.increment }}
     - name: Setup GitHub Author
       run: |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
     - name: Semantic Release
-      run: pnpx release-it minor --ci
+      run: pnpx release-it ${{ steps.get_increment.outputs.increment }} --ci --dry-run
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
