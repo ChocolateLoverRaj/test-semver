@@ -16,7 +16,20 @@ jobs:
       uses: pnpm/action-setup@v2.0.1
       with:
         version: 6.4
-    - name: Release
-      uses: ChocolateLoverRaj/pr-increment-preview@main
+    - id: get_increment
+      name: Get Increment
+      uses: ChocolateLoverRaj/detect-increment@v1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - id: capitalize_increment
+      name: Capitalize Increment
+      uses: ASzc/change-string-case-action@v2
+      with:
+        string: ${{ steps.get_increment.outputs.increment }}
+    - name: Update Pull Request Labels
+      uses: ChocolateLoverRaj/label-manager@v1.0
+      with:
+        manage: '["Semver Increment: None", "Semver Increment: Patch", "Semver Increment: Minor", "Semver Increment: Major"]'
+        set: '["Semver Increment: ${{ steps.capitalize_increment.outputs.capitalized }}"]'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
