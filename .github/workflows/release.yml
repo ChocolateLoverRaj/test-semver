@@ -20,7 +20,6 @@ jobs:
     - id: get_increment
       name: Get Increment
       uses: ChocolateLoverRaj/detect-increment@main
-    - run: echo ${{ steps.get_increment.outputs.increment }}
     - if: steps.get_increment.outputs.increment != 'none'
       name: Setup GitHub Author
       run: |
@@ -28,7 +27,7 @@ jobs:
         git config --global user.name "github-actions[bot]"
     - if: steps.get_increment.outputs.increment != 'none'
       name: Semantic Release
-      run: pnpx release-it ${{ steps.get_increment.outputs.increment }} --ci --dry-run
+      run: pnpx release-it ${{ steps.get_increment.outputs.increment }} --ci
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
