@@ -27,8 +27,8 @@ jobs:
         pnpm build
         pnpm start
       working-directory: release-preview
-      with:
-        increments: ${{ steps.get_increment.outputs.increments_by_scopes }}
+      env:
+        INPUT_INCREMENTS: ${{ steps.get_increment.outputs.increments_by_scopes }}
     - name: Update Pull Request Labels
       uses: ChocolateLoverRaj/label-manager@v1.0
       with:
