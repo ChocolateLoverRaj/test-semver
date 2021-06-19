@@ -18,18 +18,21 @@ jobs:
         version: 6.4
     - id: get_increment
       name: Get Increment
-      uses: ChocolateLoverRaj/detect-increment@v1.0
+      uses: ChocolateLoverRaj/detect-increment@v1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - id: capitalize_increment
-      name: Capitalize Increment
-      uses: ASzc/change-string-case-action@v2
+    - id: get_labels
+      name: Get Labels
+      run: |
+        pnpm build
+        pnpm start
+      working-directory: release-preview
       with:
-        string: ${{ steps.get_increment.outputs.increment }}
+        increments: ${{ steps.get_increment.outputs.increments_by_scopes }}
     - name: Update Pull Request Labels
       uses: ChocolateLoverRaj/label-manager@v1.0
       with:
-        manage: '["Semver Increment: None", "Semver Increment: Patch", "Semver Increment: Minor", "Semver Increment: Major"]'
-        set: '["Semver Increment: ${{ steps.capitalize_increment.outputs.capitalized }}"]'
+        manage: ${{ steps.get_labels.outputs.manage }}
+        set: ${{ steps.get_labels.outputs.set }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

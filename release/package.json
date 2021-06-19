@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "release",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ChocolateLoverRaj/test-semver#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChocolateLoverRaj/test-semver.git",
+    "directory": "release"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsc"
+  },
+  "main": "dist/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": ">=7.12.1",
+    "eslint-plugin-import": ">=2.22.1",
+    "eslint-plugin-node": ">=11.1.0",
+    "eslint-plugin-promise": ">=4.2.1",
+    "typescript": "^4.3.4",
+    "@typescript-eslint/eslint-plugin": ">=4.0.1",
+    "eslint-config-standard-with-typescript": "^20.0.0"
+  },
+  "author": {
+    "name": "Rajas Paranjpe",
+    "url": "https://github.com/ChocolateLoverRaj"
+  }
+}
