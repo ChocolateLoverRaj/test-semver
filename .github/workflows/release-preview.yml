@@ -21,6 +21,18 @@ jobs:
       uses: ChocolateLoverRaj/detect-increment@v1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - id: get_packages_json
+      name: Get Packages
+      uses: ./list-to-json
+      with:
+        list: "$(ls packages)"
+    - id: get_new_packages
+      name: Get New Packages
+      uses: ./get-new-packages
+      with:
+        packages_glob: packages/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - id: get_labels
       name: Get Labels
       run: |
@@ -29,7 +41,9 @@ jobs:
         pnpm start
       working-directory: release-preview
       env:
+        INPUT_PACKAGES: ${{ steps.get_packages_json.outputs.json }}
         INPUT_INCREMENTS: ${{ steps.get_increment.outputs.increments_by_scope }}
+        INPUT_NEW_PACKAGES: ${{ steps.get_new_packages.outputs.new_packages }}
     - name: Update Pull Request Labels
       uses: ChocolateLoverRaj/label-manager@v1.0
       with:

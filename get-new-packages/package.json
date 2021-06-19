@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "release-preview",
+  "name": "get-new-packages",
   "version": "1.0.0",
   "homepage": "https://github.com/ChocolateLoverRaj/test-semver#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChocolateLoverRaj/test-semver.git",
-    "directory": "release-preview"
+    "directory": "get-new-packages"
   },
   "scripts": {
     "lint": "eslint .",
@@ -14,17 +14,24 @@
     "start": "node dist/index.js"
   },
   "main": "dist/index.js",
-  "types": "./dist/esm/index.d.ts",
   "dependencies": {
     "@actions/core": "^1.4.0",
-    "capitalize": "^2.0.3",
+    "@actions/glob": "^0.2.0",
+    "@octokit/rest": "^18.6.0",
+    "arr-diff": "^4.0.0",
     "jsonfile": "^6.1.0",
-    "jsonschema": "^1.4.0",
+    "last-element": "^1.0.1",
+    "never": "^1.0.3",
     "tslib": "^2.3.0"
   },
+  "author": {
+    "name": "Rajas Paranjpe",
+    "url": "https://github.com/ChocolateLoverRaj"
+  },
   "devDependencies": {
-    "@types/capitalize": "^2.0.0",
+    "@types/arr-diff": "^4.0.0",
     "@types/jsonfile": "^6.0.0",
+    "@types/last-element": "^1.0.0",
     "@typescript-eslint/eslint-plugin": ">=4.0.1",
     "eslint": ">=7.12.1",
     "eslint-config-standard-with-typescript": "^20.0.0",
@@ -32,9 +39,5 @@
     "eslint-plugin-node": ">=11.1.0",
     "eslint-plugin-promise": ">=4.2.1",
     "typescript": "^4.3.4"
-  },
-  "author": {
-    "name": "Rajas Paranjpe",
-    "url": "https://github.com/ChocolateLoverRaj"
   }
 }

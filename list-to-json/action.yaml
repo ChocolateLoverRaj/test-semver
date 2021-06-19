@@ -1,0 +1,16 @@
+name: List to JSON
+description: Transforms a list of space separated strings into a JSON string
+inputs:
+  list:
+    description: String of space separated strings
+    required: true
+outputs:
+  json:
+    description: JSON array string
+    value: ${{ steps.main.outputs.json }}
+runs:
+  using: composite
+  steps:
+    - id: main
+      run: . ${{ github.action_path }}/listToJson.sh ${{ inputs.list }}
+      shell: bash
