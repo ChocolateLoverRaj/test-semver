@@ -24,11 +24,12 @@ jobs:
     - id: get_labels
       name: Get Labels
       run: |
+        pnpm i
         pnpm build
         pnpm start
       working-directory: release-preview
       env:
-        INPUT_INCREMENTS: ${{ steps.get_increment.outputs.increments_by_scopes }}
+        INPUT_INCREMENTS: ${{ steps.get_increment.outputs.increments_by_scope }}
     - name: Update Pull Request Labels
       uses: ChocolateLoverRaj/label-manager@v1.0
       with:

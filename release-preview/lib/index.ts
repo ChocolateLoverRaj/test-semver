@@ -19,7 +19,11 @@ setOutput('manage', JSON.stringify([
   ...increments.map(incrementMapFn),
   ...packages.map(packageMapFn)
 ]))
-setOutput('set', JSON.stringify([
+const setLabels = [
   ...Object.keys(incrementsByScopes).map(packageMapFn),
   ...Object.values(incrementsByScopes).map(incrementMapFn)
-]))
+]
+if (Object.keys(incrementsByScopes).length === 0) {
+  setLabels.push(incrementMapFn('none'))
+}
+setOutput('set', JSON.stringify(setLabels))
