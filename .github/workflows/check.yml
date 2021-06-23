@@ -10,3 +10,19 @@ jobs:
       - uses: ChocolateLoverRaj/npm-version/freeze@2.0.0
         with:
           options: 'freeze.json'
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.4
+          run_install: true
+      - name: Lint All Packages
+        run: pnpm recursive run lint
