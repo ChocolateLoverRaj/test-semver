@@ -4,6 +4,7 @@
         "Pnpm",
         "Semver",
         "cycjimmy",
+        "execa",
         "globber",
         "noice",
         "noreply",
