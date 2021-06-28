@@ -26,9 +26,9 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
         increment,
         '--ci',
         gitChangelog,
-      `--git.tagName ${name}-v\${version}`,
-      `--git.commitMessage Chore: release ${name} v\${version}`,
-      '--github.release true'
+        `--git.tagName "${name}-v\${version}"`,
+        `--git.commitMessage Chore: release ${name} v\${version}`,
+        '--github.release true'
       ], { cwd })
       command.stdout?.pipe(process.stdout)
       await command
@@ -56,9 +56,9 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
         'release-it',
         '--ci',
         '--no-increment',
-      `--git.tagName ${name}-v\${version}`,
-      '--github.release true',
-      gitChangelog
+        `--git.tagName "${name}-v\${version}"`,
+        '--github.release true',
+        gitChangelog
       ], { cwd })
       command.stdout?.pipe(process.stdout)
       await command
