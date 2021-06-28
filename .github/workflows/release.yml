@@ -34,7 +34,6 @@ jobs:
       with:
         increments_by_scope: ${{ steps.get_increments.outputs.increments_by_scope }}
         new_packages: ${{ steps.get_new_packages.outputs.new_packages }}
-      working-directory: release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
