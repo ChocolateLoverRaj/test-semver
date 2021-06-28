@@ -27,7 +27,6 @@ const eventPromise = readFile(eventFilePath);
         event.before
       ))
   ])).map(paths => paths.map(path => lastElement(path.split('/'))))
-  console.log(previousPackages, currentPackages, process.env)
   const newPackages = diff(currentPackages, previousPackages)
   // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   console.log(`New packages: ${newPackages.join(', ') || '*none*'}`)
