@@ -14,6 +14,19 @@ const npmrc = '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'
 const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(dir, '.npmrc'), npmrc);
 
 (async () => {
+  if (incrementsByScope.length + newPackages.length > 0) {
+    startGroup('Setup git author')
+    const config: Record<string, string> = {
+      'user.email': '41898282+github-actions[bot]@users.noreply.github.com',
+      'user.name': 'github-actions[bot]'
+    }
+    for (const [key, value] of Object.entries(config)) {
+      const command = execa('git', ['config', '--global', key, `"${value}"`])
+      command.stdout?.pipe(process.stdout)
+      await command
+    }
+    endGroup()
+  }
   if (incrementsByScope.length > 0) {
     console.log('Incrementing existing packages')
     for (const [name, increment] of incrementsByScope) {
@@ -37,17 +50,6 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
   } else console.log('No increments necessary')
   if (newPackages.length > 0) {
     console.log('Publishing new packages')
-    startGroup('Setup git author')
-    const config: Record<string, string> = {
-      'user.email': '41898282+github-actions[bot]@users.noreply.github.com',
-      'user.name': 'github-actions[bot]'
-    }
-    for (const [key, value] of Object.entries(config)) {
-      const command = execa('git', ['config', '--global', key, `"${value}"`])
-      command.stdout?.pipe(process.stdout)
-      await command
-    }
-    endGroup()
     for (const name of newPackages) {
       startGroup(`Publishing new packages: ${name}`)
       const cwd = getCwd(name)
