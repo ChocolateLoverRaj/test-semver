@@ -24,10 +24,9 @@ const eventPromise = readFile(eventFilePath);
         new Octokit({ auth: process.env.GITHUB_TOKEN }),
         event.repository.owner.login,
         event.repository.name,
-        event.before
+        event.pull_request?.base?.sha ?? event.before
       ))
   ])).map(paths => paths.map(path => lastElement(path.split('/'))))
-  console.log(previousPackages, currentPackages, process.env)
   const newPackages = diff(currentPackages, previousPackages)
   // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
   console.log(`New packages: ${newPackages.join(', ') || '*none*'}`)

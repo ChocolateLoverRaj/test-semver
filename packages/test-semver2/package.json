@@ -1,0 +1,19 @@
+{
+  "name": "@programmerraj/test-semver",
+  "version": "1.0.0",
+  "description": "Testing out github actions setup for npm package development.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chocolateloverraj/test-semver.git",
+    "directory": "packages/test-semver2"
+  },
+  "author": "Rajas Paranjpe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chocolateloverraj/test-semver/issues"
+  },
+  "homepage": "https://github.com/chocolateloverraj/test-semver#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
