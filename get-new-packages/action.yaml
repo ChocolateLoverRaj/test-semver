@@ -1,0 +1,25 @@
+name: Get new packages
+description: Gets newly added packages in a pull request or pushed commits
+inputs:
+  packages_glob:
+    description: A glob to look for package folders.
+    required: true
+outputs:
+  new_packages:
+    description: JSON array string of new packages
+    value: ${{ steps.main.outputs.new_packages }}
+runs:
+  using: composite
+  steps:
+    - run: pnpm i
+      shell: bash
+      working-directory: ${{ github.action_path }}
+    - run: pnpm run build
+      shell: bash
+      working-directory: ${{ github.action_path }}
+    - id: main
+      run: pnpm start
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        INPUT_PACKAGES_GLOB: ${{ inputs.packages_glob }}

@@ -8,6 +8,7 @@
     "doc": "doc"
   },
   "scripts": {
+    "lint": "eslint .",
     "build": "jsdoc2md index.js > doc/API.md",
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release"
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/chocolateloverraj/test-semver#readme",
   "devDependencies": {
+    "eslint": "^7.29.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",

@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/ChocolateLoverRaj/npm-version/main/freeze/schema.json",
     "files": [
         {
-            "file": "package.json",
+            "file": "packages/test-semver/package.json",
             "freeze": {
                 "name": true,
                 "version": true,

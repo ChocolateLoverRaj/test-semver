@@ -4,10 +4,13 @@
         "Pnpm",
         "Semver",
         "cycjimmy",
+        "execa",
+        "globber",
         "noice",
         "noreply",
         "octokit",
         "pnpx",
-        "programmerraj"
+        "programmerraj",
+        "repos"
     ]
 }
