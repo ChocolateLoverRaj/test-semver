@@ -8,7 +8,7 @@ const incrementsByScope =
 const newPackages: string[] = JSON.parse(getInput('new_packages', { required: true }))
 
 const getCwd = (packageName: string): string => join(__dirname, '../../packages', packageName)
-const gitChangelog = '--git.changelog npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs'
+const gitChangelog = '--git.changelog="npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"'
 // eslint-disable-next-line no-template-curly-in-string
 const npmrc = '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'
 const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(dir, '.npmrc'), npmrc);
@@ -39,8 +39,8 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
         increment,
         '--ci',
         gitChangelog,
-        `--git.tagName "${name}-v\\\${version}"`,
-        `--git.commitMessage Chore: release ${name} v\\\${version}`,
+        `--git.tagName="${name}-v\\\${version}"`,
+        `--git.commitMessage="Chore: release ${name} v\\\${version}"`,
         '--github.release'
       ], { cwd })
       command.stdout?.pipe(process.stdout)
@@ -58,7 +58,7 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
         'release-it',
         '--ci',
         '--no-increment',
-        `--git.tagName "${name}-v\\\${version}"`,
+        `--git.tagName="${name}-v\\\${version}"`,
         '--github.release',
         gitChangelog
       ], { cwd })
