@@ -17,7 +17,7 @@ const getTagName = (name: string): string => `--git.tagName="${name}-v\${version
 const ci = '--ci'
 const githubRelease = '--github.release'
 const releaseIt = 'release-it'
-const getReleaseName = (name: string): string => `--git.releaseName="${name} v\${version}"`;
+const getReleaseName = (name: string): string => `--github.releaseName="${name} v\${version}"`;
 
 (async () => {
   if (incrementsByScope.length + newPackages.length > 0) {
@@ -45,7 +45,7 @@ const getReleaseName = (name: string): string => `--git.releaseName="${name} v\$
         increment,
         gitChangelog,
         getTagAnnotation(name),
-        `--git.commitMessage="Chore: bump \`${name}\` to \`v\${version}\``,
+        `--git.commitMessage="Chore: bump \`${name}\` to \`v\${version}\`"`,
         getTagName(name),
         ci,
         githubRelease,
