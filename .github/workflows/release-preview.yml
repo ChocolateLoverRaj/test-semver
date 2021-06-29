@@ -23,7 +23,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - id: get_packages_json
       name: Get Packages
-      uses: ./list-to-json
+      uses: ChocolateLoverRaj/list-to-json@v1.0
       with:
         list: "$(ls packages)"
     - id: get_new_packages
