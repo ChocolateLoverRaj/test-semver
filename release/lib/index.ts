@@ -11,7 +11,13 @@ const getCwd = (packageName: string): string => join(__dirname, '../../packages'
 const gitChangelog = '--git.changelog="npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"'
 // eslint-disable-next-line no-template-curly-in-string
 const npmrc = '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'
-const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(dir, '.npmrc'), npmrc);
+const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(dir, '.npmrc'), npmrc)
+const getTagAnnotation = (name: string): string => `--git.tagAnnotation="Release ${name} \${version}"`
+const getTagName = (name: string): string => `--git.tagName="${name}-v\${version}"`
+const ci = '--ci'
+const githubRelease = '--github.release'
+const releaseIt = 'release-it'
+const getReleaseName = (name: string): string => `--git.releaseName="${name} v\${version}"`;
 
 (async () => {
   if (incrementsByScope.length + newPackages.length > 0) {
@@ -35,13 +41,15 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
       const cwd = getCwd(name)
       await createNpmrc(cwd)
       const command = execa('npx', [
-        'release-it',
+        releaseIt,
         increment,
-        '--ci',
         gitChangelog,
-        `--git.tagName="${name}-v\${version}"`,
-        `--git.commitMessage="Chore: release ${name} v\${version}"`,
-        '--github.release'
+        getTagAnnotation(name),
+        `--git.commitMessage="Chore: bump \`${name}\` to \`v\${version}\``,
+        getTagName(name),
+        ci,
+        githubRelease,
+        getReleaseName(name)
       ], { cwd })
       command.stdout?.pipe(process.stdout)
       await command
@@ -55,12 +63,14 @@ const createNpmrc = async (dir: string): Promise<void> => await writeFile(join(d
       const cwd = getCwd(name)
       await createNpmrc(cwd)
       const command = execa('npx', [
-        'release-it',
-        '--ci',
+        releaseIt,
         '--no-increment',
-        `--git.tagName="${name}-v\${version}"`,
-        '--github.release',
-        gitChangelog
+        gitChangelog,
+        getTagAnnotation(name),
+        getTagName(name),
+        ci,
+        githubRelease,
+        getReleaseName(name)
       ], { cwd })
       command.stdout?.pipe(process.stdout)
       await command
