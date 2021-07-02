@@ -1,6 +1,6 @@
 {
   "name": "@programmerraj/test-semver-2",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Testing out github actions setup for npm package development.",
   "repository": {
     "type": "git",
