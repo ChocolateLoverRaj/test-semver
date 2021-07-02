@@ -28,22 +28,18 @@ jobs:
         list: "$(ls packages)"
     - id: get_new_packages
       name: Get New Packages
-      uses: ./get-new-packages
+      uses: ChocolateLoverRaj/get-new-packages@v1.0
       with:
         packages_glob: packages/*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - id: get_labels
       name: Get Labels
-      run: |
-        pnpm i
-        pnpm build
-        pnpm start
-      working-directory: release-preview
-      env:
-        INPUT_PACKAGES: ${{ steps.get_packages_json.outputs.json }}
-        INPUT_INCREMENTS: ${{ steps.get_increment.outputs.increments_by_scope }}
-        INPUT_NEW_PACKAGES: ${{ steps.get_new_packages.outputs.new_packages }}
+      uses: ChocolateLoverRaj/release-mono-repo-preview@v1.0
+      with:
+        packages: ${{ steps.get_packages_json.outputs.json }}
+        increments: ${{ steps.get_increment.outputs.increments_by_scope }}
+        new_packages: ${{ steps.get_new_packages.outputs.new_packages }}
     - name: Update Pull Request Labels
       uses: ChocolateLoverRaj/label-manager@v1.0
       with:
