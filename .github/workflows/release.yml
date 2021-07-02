@@ -30,7 +30,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Release
-      uses: ./release
+      uses: ChocolateLoverRaj/release-mono-repo@v1.0
       with:
         increments_by_scope: ${{ steps.get_increments.outputs.increments_by_scope }}
         new_packages: ${{ steps.get_new_packages.outputs.new_packages }}
