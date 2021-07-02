@@ -24,7 +24,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - id: get_new_packages
       name: Get New Packages
-      uses: ./get-new-packages
+      uses: ChocolateLoverRaj/get-new-packages@v1.0
       with:
         packages_glob: packages/*
       env:
